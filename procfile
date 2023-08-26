@@ -1,1 +1,1 @@
-   web: gunicorn bytelinkup.wsgi
+web: gunicorn bytelinkup.wsgi
