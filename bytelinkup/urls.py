@@ -23,7 +23,7 @@ urlpatterns = [
     path('',home,name='home'),
     path('about/',about,name='about'),
     path('contactUs/',contactus,name='contactUs'),
-    path('contact/',contact,name='contact'),
+    # path('contact/',contact,name='contact'),
     path('services/',services,name='services'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
