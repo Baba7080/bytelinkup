@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <title>ByteLinkuo</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'your_app/css/styles.css' %}"> {% endcomment %}
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -49,13 +50,13 @@ https://templatemo.com/tm-574-Bytelinkup
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
                           <li class="scroll-to-section"><a href="{% url 'home' %}" class="active">Home</a></li>
-                          <li class="scroll-to-section"><a href="#services">Services</a></li>
+                          <li class="scroll-to-section"><a href="{% url 'services' %}">Services</a></li>
                           <li class="scroll-to-section"><a href="{% url 'about' %}">About</a></li>
                           <li class="has-sub">
                               <a href="javascript:void(0)">Pages</a>
                               <ul class="sub-menu">
                                   <li><a href="{% url 'about'%}">About Us</a></li>
-                                  <li><a href="{% url 'contactUs' %}">Our Services</a></li>
+                                  <li><a href="{% url 'services' %}">Our Services</a></li>
                                   <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
                               </ul>
                           </li>

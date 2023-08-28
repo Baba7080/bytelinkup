@@ -21,60 +21,28 @@
   <section class="main-services">
     <div class="container">
       <div class="row">
+        {% for item in service %}
         <div class="col-lg-12">
           <div class="service-item">
             <div class="row">
               <div class="col-lg-6">
                 <div class="left-image">
-                  <img src="assets/images/service-image-01.jpg" alt="">
+                  <i class="{{ item.itag}}"></i>
+                  {% comment %} <img src="{% static 'assets/images/service-image-01.jpg'%}" alt=""> {% endcomment %}
                 </div>
               </div>
               <div class="col-lg-6 align-self-center">
                 <div class="right-text-content">
                   <i class="fas fa-archive"></i>
-                  <h4>Digital Currencies</h4>
-                  <p>You will see a bunch of free CSS templates when you search on Google. TemplateMo is the best one because it is 100% free for anyone. We do not ask you anything in return. You are free to use our templates for any purpose.</p>
+                  <h4>{{ item.name }}</h4>
+                  <p>{{ item.description }}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-12">
-          <div class="service-item">
-            <div class="row">
-              <div class="col-lg-6 align-self-center">
-                <div class="left-text-content">
-                  <i class="fas fa-archive"></i>
-                  <h4>Financial Solutions</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et ex massa. In ac laoreet urna. Curabitur eu enim nibh. Phasellus sodales nisi vel leo aliquam, ut tempus augue hendrerit. Pellentesque eu risus tincidunt, condimentum eros in, auctor augue. Vivamus et urna blandit, varius sapien sed.</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="right-image">
-                  <img src="{% static 'assets/images/service-image-02.jpg' %}" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="service-item last-service">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="left-image">
-                  <img src="{% static 'assets/images/service-image-03.jpg' %}" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="right-text-content">
-                  <i class="fas fa-archive"></i>
-                  <h4>Cryptocurrency Exchanges</h4>
-                  <p>Mauris id efficitur ante, vitae ultrices metus. Donec et nunc massa. Nullam non felis dignissim, dapibus turpis semper, vulputate lorem. Nam volutpat posuere tellus, in porttitor justo interdum nec. Aenean in dapibus risus, in euismod ligula. Aliquam vel scelerisque elit.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
+        
       </div>
     </div>
   </section>
@@ -114,8 +82,9 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="menu">
-                    <div class="active gradient-border"><span>Crypto Investments</span></div>
-                    <div class="gradient-border"><span>Cryptocurrency Market</span></div>
+                    <div class="gradient-border"><span>Web/App Development</span></div>
+                    <div class="active gradient-border"><span>Digital Marketing</span></div>
+                    <div class="gradient-border"><span>Search Engine Optimization (SEO)</span></div>
                     <div class="gradient-border"><span>Financial Planning</span></div>
                   </div>
                 </div>
@@ -124,28 +93,30 @@
                     <li class="active">
                       <div>
                         <div class="left-image">
-                          <img src="assets/images/service-details-01.jpg" alt="">
+                          <img src="{% static 'assets/images/service-details-01.jpg' %}" alt="">
                         </div>
                         <div class="right-content">
-                          <h4>Learn more about cryptocurrency investments</h4>
-                          <p>Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.</p>
-                          <span>- Top Crypto prices and charts</span>
-                          <span>- Is Cryptocurrency a good investment?</span>
-                          <span class="last-span">- Crypto Market Insiders and News</span>
+                          <h4>Web/App Development</h4>
+                          <p>Whether you aspire to launch a dynamic website that captivates your audience or envision a cutting-edge app that revolutionizes user experiences, we've got you covered. Our experts meticulously plan, design, and craft each element to perfection..</p>
+                          <span>- Planning and Strategy</span>
+                          <span>- Design and User Experience (UX)</span>
+                          <span>- Database Management</span>
+                          <span>- Integration of Third-Party Services</span>
+                          <span class="last-span">- Maintenance and Updates</span>
                         </div>
                       </div>
                     </li>
                     <li>
                       <div>
                         <div class="left-image">
-                          <img src="assets/images/service-details-02.jpg" alt="">
+                          <img src="{% static 'assets/images/service-details-02.jpg'%}" alt="">
                         </div>
                         <div class="right-content">
-                          <h4>Read more on Cryptocurrency Market</h4>
-                          <p>Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.</p>
-                          <span>- Digital Currency Exchange</span>
-                          <span>- Trading Cryptocurrencies Online</span>
-                          <span class="last-span">- Different Categories of Digital Currencies</span>
+                          <h4>Learn more about Search Engine Optimization (SEO) </h4>
+                          <p>Search Engine Optimization (SEO) is a crucial digital marketing strategy aimed at enhancing the visibility and ranking of a website or online content in search engine results pages (SERPs). By optimizing various on-page and off-page elements, such as keywords, meta tags, backlinks, and site structure, businesses and website.</p>
+                          <span>- Keyword Research</span>
+                          <span>- On-Page Optimization</span>
+                          <span class="last-span">- Analytics and Monitoring:</span>
                         </div>
                       </div>
                     </li>
@@ -156,9 +127,10 @@
                         </div>
                         <div class="right-content">
                           <h4>How to carefully plan on your online financials</h4>
-                          <p>Pellentesque ipsum elit, congue a sapien laoreet, pellentesque ultricies risus. Nulla facilisi. Mauris vitae lacinia magna. Nam euismod sapien sit amet elementum blandit. Nulla non placerat neque.</p>
-                          <span>- Financial Planning and Investments</span>
-                          <span>- Business Networking</span>
+                          <p>Welcome to a realm where dreams turn into digital realities! 🚀 Are you ready to embark on a journey that spells financial triumph for your online venture? Here's how meticulous planning can pave the way.</p>
+                          <span>- Empower Your Vision:</span>
+                          <span>-  Optimize for Triumph</span>
+                          <span>-  🔒 Risk Smarter</span>
                           <span class="last-span">- Managing Digital Assets</span>
                         </div>
                       </div>
