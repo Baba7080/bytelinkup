@@ -30,3 +30,13 @@ class ContactForm(forms.ModelForm):
     #         instance.save()
     #         self.save_m2m()
     #     return instance
+
+class Review(forms.ModelForm):
+    name = forms.CharField(label="Enter Your Name")
+    email = forms.CharField(required=True, widget=forms.EmailInput(attrs={'class':"form-control"}))
+    Org = forms.CharField(label="Enter Your Organisation ")
+    description = forms.CharField(label="One word for bytelinkup")
+    image = forms.ImageField()
+    class Meta:
+        model = Review
+        fields = ['name','email','Org','description','image']
