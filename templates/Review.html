@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+  <!-- ***** Header Area End ***** -->
+{% block post %}
+
+<section class="contact-us-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Contact Us</h6>
+            <h4>Your feedback is invaluable to us as we continuously strive to enhance the quality of our services. We greatly appreciate your reviews, as they play a crucial role in our ongoing efforts to improve. Thank you for being a part of our journey!</h4>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-lg-10 offset-lg-1">
+          <form id="contact" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for fm in form %}
+                <div class="form-group mb-3">
+                    {{fm.label_tag}} {{fm}}<small class="text-danger">{{fm.errors | striptags}}</small>
+                </div>
+            {% endfor %}
+            <input type="submit" value="Submit" class="btn btn-primary bg-primary">
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock post %}
