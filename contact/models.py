@@ -14,6 +14,7 @@ class Service(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     itag = models.CharField(max_length=200)
+    image = models.ImageField(default='ittrain.png', upload_to='service')
     def __str__(self):
         return self.name
 
