@@ -1,8 +1,20 @@
 from django.shortcuts import render
 from .form import *
 from django.contrib import messages
-
+from contact.models import *
 def home(req):
+    if req.method == 'POST':
+        form = ContactForm(req.POST)
+        if form.is_valid:
+            names = req.POST.get('name')
+            emails = req.POST.get('email')
+            subjects = req.POST.get('subject')
+            Category = req.POST.get('Category')
+            saveContact = Contact.objects.create(name=names,email=emails,subject=subjects,message=Category)
+            messages.success(req, 'Form submitted successfully!')
+            # form.save()
+            return render(req,'index.html')
+
     service = Service.objects.all()
     return render(req,'index.html',{'service':service})
 
