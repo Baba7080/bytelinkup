@@ -27,9 +27,12 @@ def services(req):
 def contactus(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        if form.is_valid():
-            form.save()
-            form = ContactForm()
+        if form.is_valid:
+            names = request.POST.get('name')
+            emails = request.POST.get('email')
+            subjects = request.POST.get('subject')
+            Category = request.POST.get('Category')
+            saveContact = Contact.objects.create(name=names,email=emails,subject=subjects,message=Category)
             messages.success(request, 'Form submitted successfully!')
             # return redirect('success')
             return render(request,'contact-us.html',{'form':form})

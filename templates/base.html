@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-
   <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    {% comment %} <title>ByteLinkuo</title> {% endcomment %}
-    {% comment %} <link rel="icon" type="image/png" href="/{% static 'assets/images/logo.png' %}"> {% endcomment %}
-    <link rel="icon" href="{% static 'assets/images/logo.png'%}" sizes="32x32"/>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
 
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{% static 'assets/lib/animate/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{%static 'assets/css/bootstrap.min.css'%}" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
     {% comment %} <link rel="stylesheet" href="{% static 'your_app/css/styles.css' %}"> {% endcomment %}
     <title>Bytelinkup Your Digital Partner</title>
     <!-- Bootstrap core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441132417149503"
     crossorigin="anonymous"></script>
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/templatemo-574-mexant.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
     {% block css %}{% endblock css%}
-<!--
 
-TemplateMo 574 Bytelinkup
-
-https://templatemo.com/tm-574-Bytelinkup
-
--->
   </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3QQ181H4S9"></script>
@@ -49,42 +47,75 @@ https://templatemo.com/tm-574-Bytelinkup
 
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <nav class="main-nav">
-                      <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
-                          {% comment %} <img src="{% static 'assets/images/logo.png' %}" alt=""> {% endcomment %}
-                      </a>
-                      <!-- ***** Logo End ***** -->
-                      <!-- ***** Menu Start ***** -->
-                      <ul class="nav">
-                          <li class="scroll-to-section"><a href="{% url 'home' %}" class="active">Home</a></li>
-                          <li class="scroll-to-section"><a href="{% url 'services' %}">Services</a></li>
-                          <li class="scroll-to-section"><a href="{% url 'about' %}">About</a></li>
-                          <li class="has-sub">
-                              <a href="javascript:void(0)">Pages</a>
-                              <ul class="sub-menu">
-                                  <li><a href="{% url 'about'%}">About Us</a></li>
-                                  <li><a href="{% url 'services' %}">Our Services</a></li>
-                                  <li><a href="{% url 'contactUs' %}">Contact Us</a></li>
-                              </ul>
-                          </li>
-                          <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
-                          <li class="scroll-to-section"><a href="https://bytelinkup.blogspot.com/">View Blogs</a></li>
-                          <li><a href="{% url 'contactUs' %}">Contact Support</a></li> 
-                      </ul>        
-                      <a class='menu-trigger'>
-                          <span>Menu</span>
-                      </a>
-                      <!-- ***** Menu End ***** -->
-                  </nav>
+         <!-- Spinner Start -->
+         <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+          <div class="spinner-grow text-primary" role="status"></div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Topbar Start -->
+      <div class="container-fluid bg-dark py-2 d-none d-md-flex">
+          <div class="container">
+              <div class="d-flex justify-content-between topbar">
+                  <div class="top-info">
+                    <small class="me-3 text-white-50"><a href="#"><i class="fas fa-map-marker-alt me-2 text-secondary"></i></a>Gomti Nagar, Lucknow, India</small>
+                    <small class="me-3 text-white-50"><a href="mailto:info@bytelinkup.com"><i class="fas fa-envelope me-2 text-secondary"></i></a>info@bytelinkup.com</small>                    
+                  </div>
+                  <div id="note" class="text-secondary d-none d-xl-flex"><small>Note : We are here to  help you to Grow your Business</small></div>
+                  <div class="top-link">
+                      <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-facebook-f text-primary"></i></a>
+                      <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-twitter text-primary"></i></a>
+                      <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle"><i class="fab fa-instagram text-primary"></i></a>
+                      <a href="" class="bg-light nav-fill btn btn-sm-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+                  </div>
               </div>
           </div>
       </div>
-  </header>
+      <!-- Topbar End -->
+
+      <!-- Navbar Start -->
+      <div class="container-fluid bg-primary">
+          <div class="container">
+              <nav class="navbar navbar-dark navbar-expand-lg py-0">
+                  <a href="{% url "home" %}" class="navbar-brand">
+                      <h1 class="text-white fw-bold d-block">Byte<span class="text-secondary">linkup</span> </h1>
+                  </a>
+                  <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse bg-transparent" id="navbarCollapse">
+                      <div class="navbar-nav ms-auto mx-xl-auto p-0">
+                          <a href="{% url "home" %}" class="nav-item nav-link active text-secondary">Home</a>
+                          <a href="{% url "about" %}" class="nav-item nav-link">About</a>
+                          <a href="{% url "services" %}" class="nav-item nav-link">Services</a>
+                          {% comment %} <a href="project.html" class="nav-item nav-link">Projects</a> {% endcomment %}
+                          <a href="" class="nav-item nav-link">Testimonial</a>
+                          <a href="https://bytelinkup.blogspot.com/" class="nav-item nav-link">View Blog</a>
+                         
+                          <a href="{% url 'contactUs' %}" class="nav-item nav-link">Contact</a>
+                      </div>
+                  </div>
+                  <div class="d-none d-xl-flex flex-shirink-0">
+                      <div id="phone-tada" class="d-flex align-items-center justify-content-center me-4">
+                          <a href="" class="position-relative animated tada infinite">
+                              <i class="fa fa-phone-alt text-white fa-2x"></i>
+                              <div class="position-absolute" style="top: -7px; left: 20px;">
+                                  <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                              </div>
+                          </a>
+                      </div>
+                      <div class="d-flex flex-column pe-4 border-end">
+                          <span class="text-white-50">Have any questions?</span>
+                          <span class="text-secondary">Call: +91 95557 14796</span>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-center ms-4 ">
+                          <a href="#"><i class="bi bi-search text-white fa-2x"></i> </a>
+                      </div>
+                  </div>
+              </nav>
+          </div>
+      </div>
+      <!-- Navbar End -->
   {% block post %} {% endblock post %}
   {% block sugestion %}
 
@@ -92,59 +123,82 @@ https://templatemo.com/tm-574-Bytelinkup
 
   {% block some %} {% endblock some %}
 
-  <section class="partners">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="{% static 'assets/images/logo123.png' %}" alt="">
+ <!-- Footer Start -->
+<div class="container-fluid footer bg-dark wow fadeIn" data-wow-delay=".3s">
+  <div class="container pt-5 pb-4">
+      <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+              <a href="index.html">
+                  <h1 class="text-white fw-bold d-block">Byte<span class="text-secondary">Linkup</span> </h1>
+              </a>
+              <p class="mt-4 text-light">Your Bussiness Digital Partner.</p>
+              <div class="d-flex hightech-link">
+                  <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-facebook-f text-primary"></i></a>
+                  <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-twitter text-primary"></i></a>
+                  <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-2"><i class="fab fa-instagram text-primary"></i></a>
+                  <a href="" class="btn-light nav-fill btn btn-square rounded-circle me-0"><i class="fab fa-linkedin-in text-primary"></i></a>
+              </div>
           </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="{% static 'assets/images/logo123.png' %}" alt="">
+          <div class="col-lg-3 col-md-6">
+              <a href="#" class="h3 text-secondary">Short Link</a>
+              <div class="mt-4 d-flex flex-column short-link">
+                  <a href="{% url "about" %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>About us</a>
+                  <a href="{% url 'contactUs' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact us</a>
+                  <a href="{% url 'services' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Services</a>
+                  {% comment %} <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Our Projects</a> {% endcomment %}
+                  <a href="https://bytelinkup.blogspot.com/" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Latest Blog</a>
+              </div>
           </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="{% static 'assets/images/logo123.png' %}" alt="">
+          <div class="col-lg-3 col-md-6">
+              <a href="#" class="h3 text-secondary">Help Link</a>
+              <div class="mt-4 d-flex flex-column help-link">
+                  <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Terms Of use</a>
+                  <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Privacy Policy</a>
+                  <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Helps</a>
+                  <a href="" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>FQAs</a>
+                  <a href="{% url 'contactUs' %}" class="mb-2 text-white"><i class="fas fa-angle-right text-secondary me-2"></i>Contact</a>
+              </div>
           </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="{% static 'assets/images/logo123.png' %}" alt="">
+          <div class="col-lg-3 col-md-6">
+              <a href="{% url 'contactUs' %}" class="h3 text-secondary">Contact Us</a>
+              <div class="text-white mt-4 d-flex flex-column contact-link">
+                <a href="#" class="pb-3 text-light border-bottom border-primary"><i class="fas fa-map-marker-alt text-secondary me-2"></i> Gomti Nagar, Lucknow, India</a>
+                <a href="tel:+919555714796" class="py-3 text-light border-bottom border-primary"><i class="fas fa-phone-alt text-secondary me-2"></i> +91 95557 14796</a>
+                <a href="mailto:info@bytelinkup.com" class="py-3 text-light border-bottom border-primary"><i class="fas fa-envelope text-secondary me-2"></i> info@bytelinkup.com</a>
+                
+              </div>
           </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="{% static 'assets/images/logo123.png' %}" alt="">
-          </div>
-        </div>
-        <div class="col-lg-2 col-sm-4 col-6">
-          <div class="item">
-            <img src="{% static 'assets/images/logo123.png' %}" alt="">
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
+      <hr class="text-light mt-5 mb-4">
       <div class="row">
-        <div class="col-lg-12">
-          <p>Copyright © 2022 Bytelinkup Co. Pvt Ltd. All Rights Reserved. 
+          <div class="col-md-6 text-center text-md-start">
+              <span class="text-light"><a href="#" class="text-secondary"><i class="fas fa-copyright text-secondary me-2"></i>ByteLinkup</a>, All right reserved.</span>
+          </div>
           
-          <br>Designed by <a title="CSS Templates" rel="sponsored" href="https://bytelinkup.com" target="_blank">bytelinkup</a> Distributed By <a title="CSS Templates" rel="sponsored" href="https://bytelinkup.com" target="_blank">ByteLinkup</a></p>
-        </div>
       </div>
-    </div>
-  </footer>
+  </div>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
+
+
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'assets/lib/wow/wow.min.js' %}"></script>
+  <script src="{% static 'assets/lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'assets/lib/waypoints/waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <!-- Template Javascript -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+    <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
     <script src="{% static 'assets/js/isotope.min.js' %}"></script>
     <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
@@ -152,49 +206,6 @@ https://templatemo.com/tm-574-Bytelinkup
     <script src="{% static 'assets/js/tabs.js' %}"></script>
     <script src="{% static 'assets/js/swiper.js' %}"></script>
     <script src="{% static 'assets/js/custom.js' %}"></script>
-    <script>
-        var interleaveOffset = 0.5;
-
-      var swiperOptions = {
-        loop: true,
-        speed: 1000,
-        grabCursor: true,
-        watchSlidesProgress: true,
-        mousewheelControl: true,
-        keyboardControl: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        },
-        on: {
-          progress: function() {
-            var swiper = this;
-            for (var i = 0; i < swiper.slides.length; i++) {
-              var slideProgress = swiper.slides[i].progress;
-              var innerOffset = swiper.width * interleaveOffset;
-              var innerTranslate = slideProgress * innerOffset;
-              swiper.slides[i].querySelector(".slide-inner").style.transform =
-                "translate3d(" + innerTranslate + "px, 0, 0)";
-            }      
-          },
-          touchStart: function() {
-            var swiper = this;
-            for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = "";
-            }
-          },
-          setTransition: function(speed) {
-            var swiper = this;
-            for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = speed + "ms";
-              swiper.slides[i].querySelector(".slide-inner").style.transition =
-                speed + "ms";
-            }
-          }
-        }
-      };
-
-      var swiper = new Swiper(".swiper-container", swiperOptions);
-    </script>
+ 
   </body>
   </html>
