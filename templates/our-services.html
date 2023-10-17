@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
+{% block css %}
+{% comment %} <title>ByteLinkuo</title> {% endcomment %}
+{% comment %} <link rel="icon" type="image/png" href="/{% static 'assets/images/logo.png' %}"> {% endcomment %}
+<link rel="icon" href="{% static 'assets1/images/logo.png'%}" sizes="32x32"/>
+
+{% comment %} <link rel="stylesheet" href="{% static 'your_app/css/styles.css' %}"> {% endcomment %}
+<title>Bytelinkup Your Digital Partner</title>
+<!-- Bootstrap core CSS -->
+{% comment %} <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"> {% endcomment %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3441132417149503"
+crossorigin="anonymous"></script>
+
+<!-- Additional CSS Files -->
+{% comment %} <link rel="stylesheet" href="{% static 'assets1/css/fontawesome.css' %}"> {% endcomment %}
+<link rel="stylesheet" href="{% static 'assets1/css/templatemo-574-mexant.css' %}">
+<link rel="stylesheet" href="{% static 'assets1/css/owl.css' %}">
+<link rel="stylesheet" href="{% static 'assets1/css/animate.css' %}">
+{% endblock css %}
   <!-- ***** Header Area End ***** -->
 {% block post %}
   <div class="page-heading">
@@ -93,7 +111,7 @@
                     <li class="active">
                       <div>
                         <div class="left-image">
-                          <img src="{% static 'assets/images/service-details-01.jpg' %}" alt="">
+                          <img src="{% static 'assets1/images/service-details-01.jpg' %}" alt="">
                         </div>
                         <div class="right-content mt-2">
                           <h4>Web/App Dev</h4>
@@ -109,7 +127,7 @@
                     <li>
                       <div>
                         <div class="left-image">
-                          <img src="{% static 'assets/images/service-details-02.jpg'%}" alt="">
+                          <img src="{% static 'assets1/images/service-details-02.jpg'%}" alt="">
                         </div>
                         <div class="right-content mt-2">
                           <h4>Learn more about Search Engine Optimization (SEO) </h4>
@@ -123,7 +141,7 @@
                     <li>
                       <div>
                         <div class="left-image">
-                          <img src="{% static 'assets/images/service-detail s-03'%}.jpg" alt="">
+                          <img src="{% static 'assets1/images/service-detail s-03'%}.jpg" alt="">
                         </div>
                         <div class="right-content mt-2">
                           <h4>How to carefully plan on your online financials</h4>
