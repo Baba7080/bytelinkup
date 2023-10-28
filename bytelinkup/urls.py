@@ -18,6 +18,8 @@ from django.urls import path
 from .views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from blu.views import * 
+
 urlpatterns = [
     path('bytelinkupadmin/', admin.site.urls),
     path('',home,name='home'),
@@ -26,6 +28,12 @@ urlpatterns = [
     # path('contact/',contact,name='contact'),
     path('services/',services,name='services'),
     path('usereview/',ReviewClient,name='usereview'),
+
+    path('web-design/',web_design_detail_view,name='webdes'),
+    path('web-development/',web_development_detail_view,name='webdev'),
+    path('ui-ux-design/',ui_ux_design_detail_view,name='uiux'),
+    path('digital-marketing/',digital_marketing_detail_view,name='digimar'),
+    path('shopify/',shopify_detail_view,name='shopify'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
